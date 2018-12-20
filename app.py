@@ -22,7 +22,7 @@ def home():
 def scraper():
     # Run the scrape function
     mars_data = mongo.db.mars_data
-    mars_data_data = mars_data.scrape()
+    mars_data_data = scrape_mars.scrape()
 
     #Update the Mongo database using update and insert=True)
     mars_data.update({},mars_data_data,upsert=True)
